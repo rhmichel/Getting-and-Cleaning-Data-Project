@@ -22,4 +22,16 @@ Creates a second, independent tidy data set with the average of each variable fo
 
 CodeBook
 
-This file will explain the different steps of the script.
+This file will explain the different steps of the script. It will also give background information on the data itself.
+
+The "run_analysis.R" script follows the following steps:
+
+1) It will load the zipped data files from the (http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones) link and put it in a directory named "HAR" (if required, it will create the directory). 
+2) It unzips the zip file.
+3) It reads the features and filters only the features that contain "mean()" and "std()".
+4) It will load all train and test data for the filtered features. 
+5) It will use negative widths in "read.fwf" to skip the columns that are not required. That makes it much faster to load and process.
+6) It will merge the subject files to main data and then merges all train and test data (using rbind). The result is a dataframe named "all_data". 
+7) It also labels the columns by the name of the features.
+8) It creates another dataframe named "all_average" that contains the mean of all columns by "subject", using "aggregate" function.
+9) It writes both dataframes into CSV files.
