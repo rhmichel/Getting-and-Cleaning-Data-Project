@@ -12,16 +12,14 @@ The purpose of this project is to demonstrate the ability to collect, work with,
 There are two files in this repo: run_analysis.R and CodeBook
 
 
-run_analysis.R
-
-Includes all the required scripts to download and process the files and then saves the tidy datasets onto the disk.
-Accomplishes the following steps, as assigned:
+run_analysis.R includes all the required scripts to download and process the files and then saves the tidy datasets onto the disk.
+It accomplishes the following steps, as assigned:
 Merges the training and the test sets to create one data set.
 Extracts only the measurements on the mean and standard deviation for each measurement.
 Uses descriptive activity names to name the activities in the data set
 Appropriately labels the data set with descriptive activity names.
 Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-CodeBook.md
+CodeBook
 
 This file will explain the different steps of the script.
